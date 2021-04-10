@@ -8,3 +8,5 @@ Some things I like:
 - 727
 
 ![Github Stats](https://github-readme-stats.vercel.app/api?username=sup3rfire&show_icons=true&theme=tokyonight)
+
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=sup3rfire&layout=compact&theme=tokyonight)
