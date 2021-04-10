@@ -6,3 +6,5 @@ I really like:
 - [Minecraft](https://namemc.com/profile/nnnnnnnnnnnnnnn.8)
 - Anthropomorphic animals
 - 727
+
+![Github Stats](https://github-readme-stats.vercel.app/api?username=sup3rfire&show_icons=true&theme=tokyonight)
