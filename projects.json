@@ -1,1 +1,23 @@
-
+{
+  "projects": [
+    {
+      "title": "Personal Site",
+      "desc": "A simple site listing my socials, projects, recent blogs",
+      "links": {
+        "Homepage": "https://sf-hub.cc/"
+      }
+    },
+    {
+      "title": "Privatus",
+      "desc": "Haha sike no longer cancelled"
+    },
+    {
+      "title": "727",
+      "desc": "727 WYSI"
+      "links": {
+        "Homepage": "https://727.sf-hub.cc/",
+        "Repository": "https://github.com/Sup3rFire/727"
+      }
+    }
+  ]
+}
