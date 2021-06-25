@@ -1,4 +1,10 @@
-# Hello! I'm Super!
+# Hello! I'm SuperFire!
+
+> For the king for the land for the mountains  
+For the green valleys where dragons fly  
+For the glory the power to win the black lord  
+I will search for the emerald sword  
+
 <details>
   <summary>Some things I like:</summary>
     <ul>
