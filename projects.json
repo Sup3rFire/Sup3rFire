@@ -18,6 +18,14 @@
         "Homepage": "https://727.sf-hub.cc/",
         "Repository": "https://github.com/Sup3rFire/727"
       }
+    },
+    {
+      "title": "TETR.JS",
+      "desc": "An API Wrapper For TETR.IO",
+      "links": {
+        "Homepage": "https://tetr.js.org/",
+        "Repository": "https://github.com/tetrjs/tetr.js"
+      }
     }
   ]
 }
