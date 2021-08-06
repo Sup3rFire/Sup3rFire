@@ -42,9 +42,14 @@ body {
   color: #e2e2e2;
 }
 
-h1 {
+h1,
+h2 {
+  color: #f7f7f7;
   font-size: 3em;
   margin: 0.3em 0;
+}
+h2 {
+  margin: 0.1em 0;
 }
 a {
   color: #a9b0b8;
@@ -74,12 +79,23 @@ header nav a {
   font-size: 45px;
   margin: 0.3rem;
 }
-header nav a svg,
-header nav a img {
+header nav a > * {
   color: #d9dfe6;
 }
 section {
-  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 1rem 5rem;
+}
+hr {
+  border-color: #9797a3;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.644);
+  margin: 0;
+  margin-bottom: 0.2em;
+}
+p {
+  margin: 0em;
+  margin-top: 1rem;
+  font-size: 1.7em;
 }
 
 #background {
@@ -111,6 +127,11 @@ section {
 }
 
 /* Responsiveness */
+@media screen and (max-width: 1024px) {
+  p {
+    font-size: 1.2em;
+  }
+}
 @media screen and (max-width: 768px) {
   h1 {
     font-size: 2em;
@@ -118,5 +139,8 @@ section {
   header nav {
     transform: scale(0.75);
     margin-top: -15px;
+  }
+  section {
+    padding: 1rem 2rem;
   }
 }
