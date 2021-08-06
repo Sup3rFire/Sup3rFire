@@ -8,18 +8,6 @@
       }
     },
     {
-      "title": "Privatus",
-      "desc": "Haha sike no longer cancelled"
-    },
-    {
-      "title": "727",
-      "desc": "727 WYSI",
-      "links": {
-        "Homepage": "https://727.sf-hub.cc/",
-        "Repository": "https://github.com/Sup3rFire/727"
-      }
-    },
-    {
       "title": "TETR.JS",
       "desc": "An API Wrapper For TETR.IO",
       "links": {

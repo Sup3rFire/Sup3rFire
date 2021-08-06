@@ -1,121 +1,96 @@
 <!DOCTYPE html>
-<html>
-
-<head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SuperFire</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous">
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <link name="msapplication-TileColor" content="#603cba">
-    <link name="theme-color" content="#ffffff">
-    <meta name="og:title" content="Super's Site | undefined">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sf-hub.cc">
-    <meta property="og:image" content="https://sf-hub.cc/images/owo.png">
-    <meta property="og:description" content="Hello, I'm SuperFire, a full-stack developer (probably...).">
-    <meta name="description" content="Hello, I'm SuperFire, a full-stack developer (probably...).">
-    <meta name="theme-color" content="#ff6464"><!-- Matomo-->
-    <script type="text/javascript">
-        var _paq = window._paq = window._paq || [];
-        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-        _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
-        _paq.push(["setCookieDomain", "*.sf-hub.cc"]);
-        _paq.push(['trackPageView']);
-        _paq.push(['enableLinkTracking']);
-        (function() {
-            var u = "//kagari.sf-hub.cc/";
-            _paq.push(['setTrackerUrl', u + 'matomo.php']);
-            _paq.push(['setSiteId', '1']);
-            var d = document,
-                g = d.createElement('script'),
-                s = d.getElementsByTagName('script')[0];
-            g.type = 'text/javascript';
-            g.async = true;
-            g.src = u + 'matomo.js';
-            s.parentNode.insertBefore(g, s);
-        })();
-    </script><noscript>
-        <p><img src="//kagari.sf-hub.cc/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt=""></p>
-    </noscript><!-- End Matomo Code-->
-</head>
-
-<body>
-    <nav class="navbar navbar-expand navbar-dark mb-2 fixed-top" style="background:transparent;">
-        <div class="container-fluid">
-            <div class="me-auto"></div>
-            <div id="social">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/channel/UCHK9NaygZzKfH8OBT9tviSA" target="_blank"> <i class="fab fa-youtube"></i></a></li>
-                    <li class="nav-item"><a class="nav-link" href="mailto:me@sf-hub.cc" target="_blank"> <i class="far fa-envelope"></i></a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://github.com/Sup3rFire/" target="_blank"> <i class="fab fa-github"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div class="long-header d-flex align-items-end pb-5" style="background:#ffc3b8;">
-        <div class="mx-auto mb-3 text-center">
-            <h1 class="display-1">SuperFire</h1>
-            <p class="h2" style="font-weight:400;"><a class="link-secondary" href="https://ch.tetr.io/u/aaaaaaaaaaaaaa" target="_blank">Tetris</a> and <a class="link-secondary" href="https://osu.ppy.sh/users/12196992" target="_blank">osu!</a> enthusiast.</p>
-        </div>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div id="background">
+      <div id="overlay"></div>
     </div>
-    <div class="svg-cont" style="background-color:#ffc3b8;box-shadow:0 -10px rgb(255, 195, 184);;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 126">
-            <path fill="#212529" d="M685.6,38.8C418.7-11.1,170.2,9.9,0,30v96h1440V30C1252.7,52.2,1010,99.4,685.6,38.8z"></path>
-        </svg></div>
-    <div class="half-wrap bg-dark text-light" style="z-index:10;position:relative;box-shadow:0 -10px #212529;">
-        <div class="container-fluid px-4">
-            <div class="w-100 text-center pb-5">
-                <div class="display-2 fw-bold">
-                    <div id="clockVal"></div>
-                </div>
-                <div class="fs-2">
-                    <div id="clockStatus"></div>
-                </div>
-            </div>
-            <div class="row justify-content-evenly">
-                <section class="col-md-5 mb-3 derg">
-                    <div class="bg"></div>
-                    <h1>About</h1>
-                    <hr class="hs">
-                    <p class="fs-4">Hello, I'm SuperFire, <a class="link-light" href="/certs" target="_blank">a full-stack developer</a> (probably...).</p>
-                    <p class="fs-4">Here are some things I like:</p>
-                    <ul class="fs-5" style="list-style-type:circle;">
-                        <li><a class="link-light" href="https://nodejs.org/" target="_blank">Node.js</a> </li>
-                        <li><a class="link-light" href="https://ch.tetr.io/u/aaaaaaaaaaaaaa" target="_blank">Tetris</a></li>
-                        <li><a class="link-light" href="https://osu.ppy.sh/users/12196992" target="_blank">osu!</a> </li>
-                        <li><a class="link-light" href="https://namemc.com/profile/nnnnnnnnnnnnnnn.8" target="_blank">Minecraft</a> </li>
-                        <li id="owo">Anthropomorphic animals</li>
-                    </ul>
-                    <p class="fs-4">and some music I listen to:</p>
-                    <ul class="fs-5">
-                        <li><a class="link-light" href="https://www.youtube.com/playlist?list=PLKZtHjG4i5AFhipBdnCgRKL_fNdtRyMEf">General</a></li>
-                        <li><a class="link-light" href="https://www.youtube.com/playlist?list=PLKZtHjG4i5AGcBDVVWvc-ek9yKle24a6U">Will Stetson</a></li>
-                        <li><a class="link-light" href="https://www.youtube.com/playlist?list=PLKZtHjG4i5AFhTh1gvTHHC2jM81ZOeGFn">Energetic Music</a></li>
-                        <li><a class="link-light" href="https://www.youtube.com/playlist?list=PLKZtHjG4i5AFQAivOIN0xipZhkUYQmO25">Generic anime openings</a></li>
-                        <li><a class="link-light" href="https://www.youtube.com/playlist?list=PLKZtHjG4i5AEY2HmmTtvE5-WbaYKUID-c">Old favourites</a></li>
-                        <li><a class="link-light" href="https://www.youtube.com/playlist?list=PLKZtHjG4i5AH_u9u9uZK1gwLpTSsDlNLR">Very old favourites</a></li>
-                    </ul>
-                </section>
-                <section class="col-md-5">
-                    <h1>Projects</h1>
-                    <hr class="hs">
-                    <div id="projDiv"></div>
-                </section>
-            </div>
-        </div>
+    <div id="attribution">
+      Photo by
+      <a
+        href="https://unsplash.com/@mischievous_penguins?utm_source=ums&utm_medium=referral&utm_content=creditCopyText"
+        >Casey Horner</a
+      >
+      on
+      <a
+        href="https://unsplash.com/?utm_source=ums&utm_medium=referral&utm_content=creditCopyText"
+        >Unsplash</a
+      >
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"> </script>
-    <script src="js/main.js">
-        < script src = "https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
-        integrity = "sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
-        crossorigin = "anonymous" >
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
-    </script>
-</body>
+    <header>
+      <h1>Hello, I'm SuperFire, <span id="typed"></span></h1>
+      <nav>
+        <a
+          href="https://www.youtube.com/channel/UCHK9NaygZzKfH8OBT9tviSA"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a
+          href="https://github.com/Sup3rFire/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+        <a
+          href="https://ch.tetr.io/u/5e9fcb8583e2a23fbb017cbf"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            src="/icon/tetrio-mono.svg"
+            width="45em"
+            style="filter: brightness(85%)"
+        /></a>
+        <a
+          href="https://osu.ppy.sh/users/12196992"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            src="/icon/osu.png"
+            width="50em"
+            style="filter: brightness(200%) grayscale(100%)"
+        /></a>
+        <a href="mailto:me@sf-hub.cc" rel="noopener noreferrer" target="_blank"
+          ><i class="fas fa-envelope"></i>
+        </a>
+        <a
+          href="https://twitter.com/Sup3rFire"
+          rel="noopener noreferrer"
+          target="_blank"
+          ><i class="fab fa-twitter"></i>
+        </a>
+        <a
+          href="https://www.guilded.gg/727"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <i class="fab fa-guilded"></i>
+        </a>
+      </nav>
+    </header>
+    <section id="about"></section>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"
+      integrity="sha512-Tn2m0TIpgVyTzzvmxLNuqbSJH3JP8jm+Cy3hvHrW7ndTDcJ1w5mBiksqDBb8GpE2ksktFvDB/ykZ0mDpsZj20w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
+      integrity="sha512-3J8teBiHrSyaaRBajZyIEtpDsXdPq1gsznKWIVb5CnorQuFhjWGhWe54z8YNnHHr7MZuExb9m5kvf964HiT1Sw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/js/main.js"></script>
+  </body>
 </html>

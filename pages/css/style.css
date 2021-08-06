@@ -1,0 +1,122 @@
+@font-face {
+  font-family: "Anicons Regular";
+  src: url("/font/AniconsGX.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Anicons Color";
+  src: url("/font/AniconsColorGX.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("/font/JosefinSans-VariableFont_wght.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("/font/JosefinSans-Italic-VariableFont_wght.ttf");
+  font-style: italic;
+  font-weight: normal;
+}
+
+:root {
+  --main-bg-color: #ffc3b8;
+  --main-bg-shadow: rgba(179, 127, 127, 0.658);
+
+  --secondary-bg-color: #323a46;
+}
+* {
+  font-family: "Josefin Sans", sans-serif;
+}
+:focus {
+  outline: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--secondary-bg-color);
+  color: #e2e2e2;
+}
+
+h1 {
+  font-size: 3em;
+  margin: 0.3em 0;
+}
+a {
+  color: #a9b0b8;
+  transition: 0.2s;
+  text-decoration: underline;
+}
+a:hover {
+  filter: brightness(150%);
+  text-decoration: underline transparent;
+}
+a:active {
+  text-decoration: underline solid;
+}
+header {
+  height: 100vh;
+  box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.644);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+header nav {
+  display: flex;
+  margin: 0 auto;
+}
+header nav a {
+  font-size: 45px;
+  margin: 0.3rem;
+}
+header nav a svg,
+header nav a img {
+  color: #d9dfe6;
+}
+section {
+  min-height: 100vh;
+}
+
+#background {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  z-index: -1;
+  background: url(/img/default.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+#overlay {
+  width: 100%;
+  height: 100%;
+  background-color: #0000007e;
+}
+
+#attribution {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.2rem;
+  color: #3f4347;
+  font-size: 1.05em;
+}
+#attribution a {
+  color: #7c8085;
+  text-decoration: none;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+  header nav {
+    transform: scale(0.75);
+    margin-top: -15px;
+  }
+}
