@@ -97,7 +97,7 @@ header nav a > * {
 }
 section {
   box-sizing: border-box;
-  padding: 1rem 8rem;
+  padding: 2rem 8rem;
 }
 hr {
   border-color: #9797a3;
@@ -144,6 +144,22 @@ p {
   float: right;
 }
 
+#contact > div {
+  display: flex;
+}
+#contact > div > div {
+  text-align: center;
+  margin: 0.5em;
+  padding: 3rem;
+  font-size: 2em;
+  flex: 1;
+  background-color: #575c64;
+  border-radius: 10px;
+}
+#contact svg {
+  font-size: 3em;
+}
+
 /* Responsiveness */
 @media screen and (max-width: 1024px) {
   p {
@@ -154,6 +170,9 @@ p {
   }
   section {
     padding: 1rem 5rem;
+  }
+  #contact > div {
+    flex-direction: column;
   }
 }
 @media screen and (max-width: 768px) {
