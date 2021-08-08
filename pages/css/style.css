@@ -147,14 +147,28 @@ p {
 #contact > div {
   display: flex;
 }
-#contact > div > div {
+#contact > div > * {
+  user-select: none;
   text-align: center;
   margin: 0.5em;
   padding: 3rem;
   font-size: 2em;
   flex: 1;
-  background-color: #575c64;
+  background-color: #6f7379;
   border-radius: 10px;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.212);
+  transition: 0.2s;
+  color: #e2e2e2;
+  cursor: pointer;
+}
+#contact a {
+  filter: none;
+  text-decoration: none;
+  color: inherit;
+}
+#contact > div > *:hover {
+  background-color: #53575e;
+  color: #ffffff;
 }
 #contact svg {
   font-size: 3em;
