@@ -55,14 +55,19 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: "Josefin Sans", sans-serif;
   color: #f7f7f7;
   font-size: 4em;
   margin: 0.3em 0;
 }
-h2 {
+h2,
+h3 {
   margin: 0.1em 0;
+}
+h3 {
+  font-size: 2.5em;
 }
 a {
   color: #a9b0b8;
@@ -105,10 +110,17 @@ hr {
   margin: 0;
   margin-bottom: 0.2em;
 }
-p {
+p,
+li {
   margin: 0em;
   margin-top: 1rem;
   font-size: 2em;
+}
+li {
+  margin-top: 0.3em;
+}
+ul {
+  margin: 0.3em 0;
 }
 
 #background {
@@ -144,11 +156,38 @@ p {
   float: right;
 }
 
+#projects p {
+  margin-top: 0.2em;
+  font-size: 1.4em;
+}
+#projects > div {
+  margin: 1rem 0;
+}
+#projects div #links {
+  margin-left: auto;
+  font-size: 1.5em;
+  margin-top: 0.5rem;
+}
+#links a {
+  font-family: "Josefin Sans", sans-serif;
+  margin-right: 0.5em;
+  text-decoration: none;
+  color: #f8f9fa;
+  border: 1px solid #a8acb1;
+  transition: 0.2s;
+  padding: 0.1em 0.4em;
+  padding-top: 0.3em;
+}
+#links a:hover {
+  border-color: #a8acb1;
+  background-color: #eeeff1;
+  color: #212529;
+}
+
 #contact > div {
   display: flex;
 }
 #contact > div > * {
-  user-select: none;
   text-align: center;
   margin: 0.5em;
   padding: 3rem;
@@ -159,14 +198,15 @@ p {
   box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.212);
   transition: 0.2s;
   color: #e2e2e2;
-  cursor: pointer;
 }
 #contact a {
+  cursor: pointer;
+  user-select: none;
   filter: none;
   text-decoration: none;
   color: inherit;
 }
-#contact > div > *:hover {
+#contact > div > a:hover {
   background-color: #53575e;
   color: #ffffff;
 }
@@ -174,34 +214,66 @@ p {
   font-size: 3em;
 }
 
+.combined {
+  display: flex;
+  padding: 2rem 5rem;
+}
+.combined > section {
+  flex: 1;
+  padding: 1rem;
+}
+
 /* Responsiveness */
 @media screen and (max-width: 1024px) {
-  p {
-    font-size: 1.2em;
+  p,
+  li {
+    font-size: 1.7em;
   }
   #about img {
     width: 300px;
   }
   section {
-    padding: 1rem 5rem;
+    padding: 1rem 5rem !important;
+  }
+  .combined {
+    flex-direction: column;
+    padding: 0;
   }
   #contact > div {
     flex-direction: column;
   }
 }
 @media screen and (max-width: 768px) {
-  h1 {
+  p,
+  li {
+    font-size: 1.4em;
+  }
+  h1,
+  h2,
+  h3 {
     font-size: 2em;
+  }
+  h3 {
+    font-size: 1.5em;
   }
   header nav {
     transform: scale(0.75);
     margin-top: -15px;
   }
   section {
-    padding: 1rem 2rem;
+    padding: 1rem 2rem !important;
   }
   #about img {
     float: none;
     width: 100%;
+  }
+  #contact > div > * {
+    font-size: 1.5em;
+  }
+  #projects > div {
+    font-size: 0.8em;
+  }
+  #projects h3 {
+    font-size: 2em;
   }
 }
