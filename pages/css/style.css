@@ -1,0 +1,279 @@
+@font-face {
+  font-family: "Anicons Regular";
+  src: url("/font/AniconsGX.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Anicons Color";
+  src: url("/font/AniconsColorGX.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("/font/JosefinSans-VariableFont_wght.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("/font/JosefinSans-Italic-VariableFont_wght.ttf");
+  font-style: italic;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Mulish";
+  src: url("/font/Mulish-VariableFont_wght.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Mulish";
+  src: url("/font/Mulish-Italic-VariableFont_wght.ttf");
+  font-style: italic;
+  font-weight: normal;
+}
+
+:root {
+  --main-bg-color: #ffc3b8;
+  --main-bg-shadow: rgba(179, 127, 127, 0.658);
+
+  --secondary-bg-color: #323a46;
+}
+* {
+  font-family: "Mulish", sans-serif;
+}
+:focus {
+  outline: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--secondary-bg-color);
+  color: #e2e2e2;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Josefin Sans", sans-serif;
+  color: #f7f7f7;
+  font-size: 4em;
+  margin: 0.3em 0;
+}
+h2,
+h3 {
+  margin: 0.1em 0;
+}
+h3 {
+  font-size: 2.5em;
+}
+a {
+  color: #a9b0b8;
+  transition: 0.2s;
+  text-decoration: underline;
+}
+a:hover {
+  filter: brightness(150%);
+  text-decoration: underline transparent;
+}
+a:active {
+  text-decoration: underline solid;
+}
+header {
+  height: 100vh;
+  box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.644);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+header nav {
+  display: flex;
+  margin: 0 auto;
+}
+header nav a {
+  font-size: 45px;
+  margin: 0.3rem;
+}
+header nav a > * {
+  color: #d9dfe6;
+}
+section {
+  box-sizing: border-box;
+  padding: 2rem 8rem;
+}
+hr {
+  border-color: #9797a3;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.644);
+  margin: 0;
+  margin-bottom: 0.2em;
+}
+p,
+li {
+  margin: 0em;
+  margin-top: 1rem;
+  font-size: 2em;
+}
+li {
+  margin-top: 0.3em;
+}
+ul {
+  margin: 0.3em 0;
+}
+
+#background {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  z-index: -1;
+  background: url(/img/default.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+#overlay {
+  width: 100%;
+  height: 100%;
+  background-color: #0000007e;
+}
+
+#attribution {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.2rem;
+  color: #3f4347;
+  font-size: 1.05em;
+}
+#attribution a {
+  color: #7c8085;
+  text-decoration: none;
+}
+
+#about img {
+  width: 400px;
+  float: right;
+}
+
+#projects p {
+  margin-top: 0.2em;
+  font-size: 1.4em;
+}
+#projects > div {
+  margin: 1rem 0;
+}
+#projects div #links {
+  margin-left: auto;
+  font-size: 1.5em;
+  margin-top: 0.5rem;
+}
+#links a {
+  font-family: "Josefin Sans", sans-serif;
+  margin-right: 0.5em;
+  text-decoration: none;
+  color: #f8f9fa;
+  border: 1px solid #a8acb1;
+  transition: 0.2s;
+  padding: 0.1em 0.4em;
+  padding-top: 0.3em;
+}
+#links a:hover {
+  border-color: #a8acb1;
+  background-color: #eeeff1;
+  color: #212529;
+}
+
+#contact > div {
+  display: flex;
+}
+#contact > div > * {
+  text-align: center;
+  margin: 0.5em;
+  padding: 3rem;
+  font-size: 2em;
+  flex: 1;
+  background-color: #6f7379;
+  border-radius: 10px;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.212);
+  transition: 0.2s;
+  color: #e2e2e2;
+}
+#contact a {
+  cursor: pointer;
+  user-select: none;
+  filter: none;
+  text-decoration: none;
+  color: inherit;
+}
+#contact > div > a:hover {
+  background-color: #53575e;
+  color: #ffffff;
+}
+#contact svg {
+  font-size: 3em;
+}
+
+.combined {
+  display: flex;
+  padding: 2rem 5rem;
+}
+.combined > section {
+  flex: 1;
+  padding: 1rem;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 1024px) {
+  p,
+  li {
+    font-size: 1.7em;
+  }
+  #about img {
+    width: 300px;
+  }
+  section {
+    padding: 1rem 5rem !important;
+  }
+  .combined {
+    flex-direction: column;
+    padding: 0;
+  }
+  #contact > div {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  p,
+  li {
+    font-size: 1.4em;
+  }
+  h1,
+  h2,
+  h3 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+  header nav {
+    transform: scale(0.75);
+    margin-top: -15px;
+  }
+  section {
+    padding: 1rem 2rem !important;
+  }
+  #about img {
+    float: none;
+    width: 100%;
+  }
+  #contact > div > * {
+    font-size: 1.5em;
+  }
+  #projects > div {
+    font-size: 0.8em;
+  }
+  #projects h3 {
+    font-size: 2em;
+  }
+}
