@@ -2,9 +2,9 @@
   "projects": [
     {
       "title": "Personal Site",
-      "desc": "A simple site listing my socials, projects, recent blogs",
+      "desc": "A simple site listing my socials, projects, recent blogs (recent blogs coming soon tm)",
       "links": {
-        "Homepage": "https://sf-hub.cc/"
+        "Homepage": "https://superfi.re/"
       }
     },
     {
@@ -13,6 +13,21 @@
       "links": {
         "Homepage": "https://tetr.js.org/",
         "Repository": "https://github.com/tetrjs/tetr.js"
+      }
+    },
+    {
+      "title": "owospeak",
+      "desc": "p-pwease owo my uwu~ UwU",
+      "links": {
+        "Homepage": "https://www.npmjs.com/package/owospeak",
+        "Repository": "https://github.com/Terrible-Projects/owospeak"
+      }
+    },
+    {
+      "title": "excellentBackground (Mini Project)",
+      "desc": "Converts png files to excel cell backgrounds",
+      "links": {
+        "Repository": "https://github.com/Terrible-Projects/excellentBackground"
       }
     }
   ]
