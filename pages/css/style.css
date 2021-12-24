@@ -53,6 +53,7 @@ body {
   padding: 0;
   background-color: var(--secondary-bg-color);
   color: #e2e2e2;
+  overflow-x: hidden;
 }
 
 h1,
@@ -101,10 +102,12 @@ header nav a {
 header nav a > * {
   color: #d9dfe6;
 }
-#typed::after {
-  content: "|";
+.typed::after {
+  content: "";
+  margin-left: 0.05em;
+  border-right: 0.1em solid #f7f7f7;
 }
-#typed.blinking::after {
+.typed.blinking::after {
   animation: blinker 1s ease-in-out infinite;
 }
 @keyframes blinker {

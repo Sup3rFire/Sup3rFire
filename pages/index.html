@@ -55,7 +55,10 @@
       >
     </div>
     <header>
-      <h1>Hello, I'm SuperFire, <span id="typed">a developer!</span></h1>
+      <h1>
+        Hello, I'm SuperFire,
+        <span id="header-titles" class="typed">a developer!</span>
+      </h1>
       <nav>
         <a
           href="https://www.youtube.com/channel/UCHK9NaygZzKfH8OBT9tviSA"
@@ -121,7 +124,7 @@
     <section id="about">
       <h2>About Me</h2>
       <hr />
-      <img src="/img/owo.png" />
+      <img id="profile-img" src="/img/owo.png" />
       <p>Hello, I'm SuperFire. I am a full-stack developer!</p>
       <p>
         Programming has been a hobby of mine for a long time. I first started
@@ -177,7 +180,7 @@
           >Minecraft</a
         >, and Touhou. I love listening to power metal, rock, and gothic metal
         (and especially Japanese ones). I also have an interest in
-        anthropomorphic animals.
+        <span id="anthropomorphic-animals">anthropomorphic animals</span>.
       </p>
       <p>
         I have used Javascript, TypeScript, PHP, Lua, and more in the past. I
@@ -196,7 +199,11 @@
         <ul>
           <li>Become a top 1% falling block puzzle game player</li>
           <li>Complete Risk of Rain 2</li>
-          <li style="text-decoration: line-through">get a fursuit</li>
+          <li>
+            <span style="text-decoration: line-through" id="fursuit-easter-egg"
+              >get a fursuit</span
+            >
+          </li>
         </ul>
       </section>
     </div>
@@ -237,6 +244,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="/js/main.js" defer></script>
+    <script src="/js/main.js" defer async></script>
   </body>
 </html>

@@ -1,4 +1,8 @@
-const projDiv = document.getElementById("projects");
+const $ = function (id) {
+  return document.getElementById(id);
+};
+
+const projDiv = $("projects");
 fetch(
   "https://raw.githubusercontent.com/Sup3rFire/Sup3rFire/main/projects.json"
 )
@@ -22,7 +26,7 @@ fetch(
 
 const startTime = new Date();
 
-const typed = document.getElementById("typed");
+const typed = $("header-titles");
 const strings = [
   "a developer!",
   "a tetris enthusiast!",
@@ -55,3 +59,64 @@ function startTyping(string = currentString) {
   }, 70);
 }
 backspace();
+
+const FEE = $("fursuit-easter-egg");
+
+let FEETimeout = null;
+function FEEmouseoverListener() {
+  if (!FEETimeout)
+    FEETimeout = setTimeout(function () {
+      FEE.classList.add("typed");
+      FEE.removeEventListener("mouseover", FEEmouseoverListener);
+      FEE.removeEventListener("mouseout", FEEmouseoutListener);
+      deleteFursuit(0)();
+    }, 5000);
+}
+function FEEmouseoutListener() {
+  if (FEETimeout) {
+    clearTimeout(FEETimeout);
+    FEETimeout = null;
+  }
+}
+FEE.addEventListener("mouseover", FEEmouseoverListener);
+FEE.addEventListener("mouseout", FEEmouseoutListener);
+
+function deleteFursuit(i) {
+  return function () {
+    if (i >= 7) {
+      setTimeout(typeMurrsuit(0), 70);
+    } else {
+      FEE.innerText = FEE.innerText.trim().slice(0, -1);
+      setTimeout(deleteFursuit(i + 1), 50);
+    }
+  };
+}
+function typeMurrsuit(i) {
+  return function () {
+    if (i >= 8) {
+      FEE.classList.add("blinking");
+      setTimeout(function () {
+        FEE.classList.remove("typed", "blinking");
+      }, 1000);
+    } else {
+      FEE.innerHTML += "murrsuit"[i];
+      setTimeout(typeMurrsuit(i + 1), 70);
+    }
+  };
+}
+
+const AAText = $("anthropomorphic-animals");
+
+let AATimeout = null;
+AAText.addEventListener("mouseover", function () {
+  if (!AATimeout)
+    AATimeout = setTimeout(function () {
+      $("profile-img").src = "/img/owo.png";
+    }, 5000);
+});
+AAText.addEventListener("mouseout", function () {
+  if (AATimeout) {
+    clearTimeout(AATimeout);
+    AATimeout = null;
+  }
+});
