@@ -40,6 +40,7 @@
   --main-bg-shadow: rgba(179, 127, 127, 0.658);
 
   --secondary-bg-color: #323a46;
+  --secondary-dark-bg-color: #262c33;
 }
 * {
   font-family: "Mulish", sans-serif;
@@ -100,6 +101,17 @@ header nav a {
 header nav a > * {
   color: #d9dfe6;
 }
+#typed::after {
+  content: "|";
+}
+#typed.blinking::after {
+  animation: blinker 1s ease-in-out infinite;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
 section {
   box-sizing: border-box;
   padding: 2rem 8rem;
@@ -129,7 +141,7 @@ ul {
   height: 100vh;
   margin: 0;
   z-index: -1;
-  background: url(/img/default.jpg) no-repeat center center fixed;
+  background: url(/img/default.jpg) no-repeat center center;
   background-size: cover;
 }
 #overlay {
@@ -185,7 +197,7 @@ ul {
 }
 
 #contact {
-  background-color: #1d20257a;
+  background-color: var(--secondary-dark-bg-color);
   position: relative;
 }
 #contact > div {
@@ -233,15 +245,16 @@ ul {
   top: 0;
   left: 0;
   right: 0;
-  height: 4em;
+  height: 2em;
+  padding-bottom: 1em;
   transform: translateY(-100%);
-  background-color: #1d20257a;
+  background-color: var(--secondary-dark-bg-color);
   background-size: cover;
   z-index: -1;
   clip-path: polygon(100% 0, 0% 100%, 100% 100%);
 }
 footer {
-  background-color: #1d20257a;
+  background-color: var(--secondary-dark-bg-color);
   position: relative;
   display: flex;
   align-items: center;

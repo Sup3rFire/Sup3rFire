@@ -32,6 +32,7 @@ const strings = [
 let currentString = "a developer!";
 
 function backspace() {
+  typed.classList.remove("blinking");
   setTimeout(function () {
     typed.innerText = typed.innerText.slice(0, -1);
     if (typed.innerText.length == 0) {
@@ -47,8 +48,10 @@ function backspace() {
 function startTyping(string = currentString) {
   setTimeout(function () {
     typed.innerHTML += string[typed.innerHTML.length];
-    if (typed.innerText.length == string.length) setTimeout(backspace, 1500);
-    else startTyping(string);
+    if (typed.innerText.length == string.length) {
+      typed.classList.add("blinking");
+      setTimeout(backspace, 1500);
+    } else startTyping(string);
   }, 70);
 }
 backspace();
