@@ -41,6 +41,8 @@
 
   --secondary-bg-color: #323a46;
   --secondary-dark-bg-color: #262c33;
+
+  --x-padding: 12rem;
 }
 * {
   font-family: "Mulish", sans-serif;
@@ -117,7 +119,7 @@ header nav a > * {
 }
 section {
   box-sizing: border-box;
-  padding: 2rem 8rem;
+  padding: 2rem var(--x-padding);
 }
 hr {
   border-color: #9797a3;
@@ -128,7 +130,7 @@ hr {
 p,
 li {
   margin: 0em;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   font-size: 2em;
 }
 li {
@@ -166,9 +168,11 @@ ul {
   text-decoration: none;
 }
 
-#about img {
-  width: 400px;
+#profile-img {
+  width: 350px;
   float: right;
+  margin: 0.7rem;
+  margin-right: 0;
 }
 
 #projects p {
@@ -235,7 +239,7 @@ ul {
 
 .combined {
   display: flex;
-  padding: 2rem 5rem;
+  padding: 2rem calc(var(--x-padding) - 2rem);
 }
 .combined > section {
   flex: 1;
@@ -269,20 +273,21 @@ footer span {
 }
 
 /* Responsiveness */
+@media screen and (max-width: 1200px) {
+  :root {
+    --x-padding: 8rem;
+  }
+}
 @media screen and (max-width: 1024px) {
+  :root {
+    --x-padding: 5rem;
+  }
   p,
   li {
     font-size: 1.7em;
   }
-  #about img {
-    width: 300px;
-  }
-  section {
-    padding: 1rem 5rem !important;
-  }
   .combined {
     flex-direction: column;
-    padding: 0;
   }
   #contact > div {
     flex-direction: column;
@@ -308,7 +313,7 @@ footer span {
   section {
     padding: 1rem 2rem !important;
   }
-  #about img {
+  #profile-img {
     float: none;
     width: 100%;
   }

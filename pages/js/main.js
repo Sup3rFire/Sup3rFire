@@ -106,12 +106,12 @@ function typeMurrsuit(i) {
 }
 
 const AAText = $("anthropomorphic-animals");
-
+const profileImage = $("profile-img");
 let AATimeout = null;
 AAText.addEventListener("mouseover", function () {
   if (!AATimeout)
     AATimeout = setTimeout(function () {
-      $("profile-img").src = "/img/owo.png";
+      profileImage.src = "/img/owo.png";
     }, 5000);
 });
 AAText.addEventListener("mouseout", function () {
